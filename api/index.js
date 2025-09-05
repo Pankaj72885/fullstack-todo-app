@@ -73,10 +73,10 @@ app.delete('/todos/:id', async (req, res) => {
 // --- SERVER START ---
 // Use the PORT from your .env file, with a fallback to 3000
 
-// const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
-// app.listen(port, () => {
-//   console.log(`Server is running on http://localhost:${port}`);
-// });
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});
 
-module.exports = app;
+// module.exports = app;
