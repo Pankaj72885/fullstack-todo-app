@@ -18,7 +18,7 @@ async function updateTodo(id, isCompleted) {
   }
 
   try {
-    await fetch(`/todos/${id}`, {
+    await fetch(`api/todos/${id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ isCompleted }),
@@ -38,7 +38,7 @@ async function deleteTodo(id) {
   }
 
   try {
-    await fetch(`/todos/${id}`, { method: 'DELETE' });
+    await fetch(`/api/todos/${id}`, { method: 'DELETE' });
   } catch (error) {
     console.error('Failed to delete todo:', error);
     alert('Failed to delete task. Syncing with server.');
@@ -69,7 +69,7 @@ function renderTodos(todos) {
 
 async function fetchTodos() {
   try {
-    const response = await fetch('/todos');
+    const response = await fetch('/api/todos');
 
     if (!response.ok) throw new Error('Network response was not ok');
     const todos = await response.json();
@@ -92,7 +92,7 @@ todoForm.addEventListener('submit', async event => {
     todoInput.disabled = true;
     try {
       // We don't need to wait for fetchTodos, the UI will update optimistically
-      const response = await fetch('/todos', {
+      const response = await fetch('/api/todos', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text }),
