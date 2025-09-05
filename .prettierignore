@@ -1,0 +1,32 @@
+# .prettierignore
+
+# ==> Dependencies
+node_modules/
+
+# ==> Build and Distribution Output
+dist/
+build/
+out/
+coverage/
+.next/
+.nuxt/
+.svelte-kit/
+.vercel/
+
+# ==> Package lockfiles (to avoid formatting conflicts with package managers)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ==> Logs
+logs/
+*.log
+
+# ==> Cache files
+.prettiercache
+.eslintcache
+.parcel-cache
+
+# ==> Local Environment Variables
+.env
+.env.local

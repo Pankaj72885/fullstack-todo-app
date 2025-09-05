@@ -1,0 +1,60 @@
+# ----------------------------------------------------------------
+# A comprehensive .gitignore file for modern development projects
+# ----------------------------------------------------------------
+
+# ==> Dependencies and Lockfiles <==
+# Dependencies are managed by package managers, so the installed folders are ignored.
+node_modules/
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+# ==> Build and Distribution <==
+# These are generated files from the build process and should not be version controlled.
+dist/
+build/
+out/
+.next/
+.nuxt/
+.svelte-kit/
+.vercel/
+coverage/
+
+# ==> Logs <==
+# Log files are specific to a user's machine and environment.
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ==> Environment Variables <==
+# Never commit environment variables, as they often contain sensitive secrets.
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# ==> IDE and Editor Directories <==
+# These folders are specific to a developer's editor configuration.
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ==> Operating System Files <==
+# System-specific hidden files.
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+*.
